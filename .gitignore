@@ -1,0 +1,23 @@
+# Byte-compiled / virtualenv
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Virtualenvs
+.venv/
+venv/
+env/
+
+# Local env/secrets
+.env
+instance/
+
+# Database and logs
+*.db
+app.db
+app.log
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
