@@ -139,9 +139,7 @@ footer{
     width:300px;
     
 }
-<<<<<<< HEAD
-=======
-/* .search-page{
+.search-page{
     width: max-content;
     display: flex;
     align-items :center;
@@ -155,8 +153,7 @@ footer{
     left: 50%;
     transform: translateX(-50%);
 
-} */
->>>>>>> 7c994c95ea01c241986786452ceb8b477691750b
+}
 .search-input::placeholder,.search-icon{
     color: rgba(0,0,0,0.25);
 }
