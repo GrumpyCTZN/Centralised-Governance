@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -8,9 +9,7 @@ html, body {
   height: 100%;
 }
 
-body{
-  background-color: white;
-
+body {
   display: flex;
   flex-direction: column;
   font-family: 'Poppins', sans-serif;
@@ -26,20 +25,10 @@ main {
   align-items: center;
   justify-content: space-between;
   padding: 10px 40px;
-  background-color: #57595d;
+  background-color: #245ebb;
 }
 
-.big_logo
-{
-  position:relative;
-  top:-50px;
-  height:200px;
-  width:800px;
-  filter: invert(100%);
-  border: 5px solid white;
-}
-.logo img{
-
+.logo img {
   height: 50px;
   width: auto;
   display: block;
@@ -63,14 +52,13 @@ main {
   transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-.navbarlist li a:hover{
-  color: #4da3ff;
-  background-color: rgba(255,255,255,0.12);
-
+.navbarlist li a:hover {
+  color: #ffd966;
+  background-color: rgba(255, 255, 255, 0.12);
 }
 
 footer {
-  background-color: gray;
+  background-color:  #245ebb;
   color: white;
   text-align: center;
   padding: 15px 10px;
@@ -90,21 +78,15 @@ footer {
   text-align: center;
 }
 
-.front-text{
-  font-size: 25px;
-  height:40px;
-  text-align:center;
-  font-weight: 700;
-}
-
-
 .mainbody h1 {
   font-size: 40px;
   font-weight: 600;
-  color: gray;
+  color:  #2f3a4a;
+;
 }
 
 
+.search,
 .search-page {
   display: flex;
   align-items: center;
@@ -116,6 +98,7 @@ footer {
   transition: background 0.25s, box-shadow 0.25s;
 }
 
+.search:focus-within,
 .search-page:focus-within {
   background: #f1f1f1;
   box-shadow: 0 0 0 3px rgba(77, 163, 255, 0.25);
@@ -138,61 +121,10 @@ footer {
 .search-input::placeholder {
   color: rgba(0, 0, 0, 0.35);
 }
-.search-page{
-    width: max-content;
-    display: flex;
-    align-items :center;
-    padding: 14px;
-    border-radius: 28px;
-    background:#f6f6f6;
-    width: 600px;
-    transition: background 0.25s;
-
-}
-.search:focus-within {
-    background:#f1f1f1;
-}
-.search-input{
-
-    font-size: 16px;
-    font-family: 'Lexend',sans-serif;
-    color:#333333 ;
-    margin-left:14px;
-    outline: none;
-    border: none;
-    background: transparent;
-    width:300px;
-    
-}
-.search-page{
-    width: max-content;
-    display: flex;
-    align-items :center;
-    padding: 14px;
-    border-radius: 28px;
-    background:#f6f6f6;
-    width: 600px;
-    transition: background 0.25s;
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-
-}
-.search-input::placeholder,.search-icon{
-    color: rgba(0,0,0,0.25);
-}
-
-
-
-
-/*Common Services page*/
 .services-wrapper {
-  max-width: 1200px; 
-  margin: 0 auto;    
-  padding:20px;
-  color: black;
-
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .services-header {
@@ -200,10 +132,11 @@ footer {
   margin-bottom: 20px;
 }
 
-.services-header h2 {
-    height:700px;
-  color:black;
+.services-header {
+  color:  #245ebb;
+  margin-bottom: 5px;
 }
+
 .services-header p {
   color: #666;
   margin: 0;
@@ -215,7 +148,9 @@ footer {
   gap: 30px;
   align-items: flex-start;
 }
-
+.services-list h3 {
+  color:  #1b4aa3;
+}
 .service-item {
   display: flex;
   flex-direction: column;
@@ -244,7 +179,7 @@ footer {
 .service-item p {
   margin: 4px 0 0;
   font-size: 14px;
-  color: #555;
+  color:  #555555;
 }
 
 .services-container {
@@ -258,28 +193,13 @@ footer {
   height: 50px;
   object-fit: contain;
 }
-
-
-/* Service Detail Page Styles */
-
-.service-detail-wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+.header h2{
+  color: rgb(82, 143, 248);
 }
-
-.service-detail-header {
-  margin-bottom: 30px;
-  padding-bottom: 15px;
-  border-bottom: 2px solid #e0e0e0;
+.website-list {
+  display: flex;
+  align-items: center;
 }
-
-.service-detail-header h1 {
-  color: black;
-  margin: 0;
-  font-size: 32px;
-}
-
 .info-boxes-container {
   display: flex;
   flex-direction: column;
