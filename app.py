@@ -1,4 +1,4 @@
-from flask import Flask,render_template, url_for,request,redirect
+from flask import Flask,render_template, url_for,request,redirect,abort
 from datetime import datetime
 
 app=Flask(__name__)
@@ -10,9 +10,17 @@ def index():
         return redirect(url_for('handleSearch'))
     return render_template('index.html')
 
-@app.route('/commonservices')
-def commonservices():
-    return render_template('commonservices.html')
+
+
+@app.route('/commonservices',strict_slashes=False)
+@app.route('/commonservices/<path:servicepath>')
+def commonservices(servicepath=None):
+    if servicepath==None: return render_template('commonservices.html')
+    elif servicepath == 'citizenship': return render_template('citizenship.html')   
+    elif servicepath=='drivinglicense': return render_template('drivinglicense.html')   
+    elif servicepath=='passport': return render_template('passport.html')  
+    elif servicepath=='lalpurja': return render_template('lalpurja.html')
+    else: abort(404)
 
 @app.route('/officialwebsite')
 def officialWebsites():
