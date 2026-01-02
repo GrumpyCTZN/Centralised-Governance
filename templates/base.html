@@ -2,16 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+<<<<<<< HEAD
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/static/css/style.css" />
 
     {% block head %}{% endblock %}
 
+=======
+    <meta name="viewport" content="width=device-width,inital-scale=1.0" />
+    <link rel="stylesheet" href="/static/css/style.css" />
+       {% block head %}{% endblock %}
+>>>>>>> 53b428fc670d7c371d80d12c6571ae1024e2dfdf
     <link rel="icon" href="/static/images/favicon.ico" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search"
     />
+<<<<<<< HEAD
     <script
       src="https://kit.fontawesome.com/27b6d5e244.js"
       crossorigin="anonymous"
@@ -27,11 +34,20 @@
             alt="Website logo"
             class="mainlogo"
           />
+=======
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <a href="{{url_for('index')}}">
+          <img src="/static/images/logo.png" alt="Website logo" />
+>>>>>>> 53b428fc670d7c371d80d12c6571ae1024e2dfdf
         </a>
       </div>
 
       <nav class="navbar">
         <ul class="navbarlist">
+<<<<<<< HEAD
           <li><a href="{{ url_for('index') }}">Home</a></li>
           <li><a href="{{ url_for('commonservices') }}">Common Services</a></li>
           <li>
@@ -56,5 +72,15 @@
         </div>
       </div>
     </footer>
+=======
+          <li><a href="{{url_for('index')}}">Home</a></li>
+          <li><a href="{{ url_for('commonservices') }}">Common Services</a></li>
+          <li><a href="{{ url_for('officialWebsites') }}">Official Website</a></li>
+        </ul>
+      </nav>
+    </div>
+    {% block body %} {% endblock %}
+    
+>>>>>>> 53b428fc670d7c371d80d12c6571ae1024e2dfdf
   </body>
 </html>

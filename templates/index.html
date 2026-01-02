@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {%extends 'base.html' %} {% block head %}
 <title>Centralised Governance</title>
 {% endblock %} {% block body %}
@@ -12,4 +13,28 @@
   </section>
 </main>
 
+=======
+{%extends 'base.html' %}
+
+{% block head %} 
+<title>Centralised Governance</title>
+{% endblock %}
+
+
+
+{% block body %} 
+<main>
+    <section id="home">
+    <form action="/" method="POST">
+        <div class="search">
+            <span class="search-icon material-symbols-outlined"> search </span>
+            <input class="search-input" type="search" placeholder="Search" id="searchQuery" name="searchQuery" />
+        </div>
+    </form>
+    </section>
+</main>
+
+
+
+>>>>>>> 53b428fc670d7c371d80d12c6571ae1024e2dfdf
 {% endblock %}
