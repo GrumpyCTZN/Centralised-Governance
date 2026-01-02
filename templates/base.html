@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,inital-scale=1.0" />
     <link rel="stylesheet" href="/static/css/style.css" />
-       {% block head %} {% endblock %}
+       {% block head %}{% endblock %}
     <link rel="icon" href="/static/images/favicon.ico" type="image/x-icon" />
     <link
       rel="stylesheet"
@@ -14,7 +14,7 @@
   <body>
     <div class="container">
       <div class="logo">
-        <a href="#">
+        <a href="{{url_for('index')}}">
           <img src="/static/images/logo.png" alt="Website logo" />
         </a>
       </div>
