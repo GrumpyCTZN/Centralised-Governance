@@ -76,20 +76,6 @@ section h1 {
     width:300px;
     
 }
-.search-page{
-    width: max-content;
-    display: flex;
-    align-items :center;
-    padding: 14px;
-    border-radius: 28px;
-    background:#f6f6f6;
-    width: 600px;
-    transition: background 0.25s;
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-}
 .search-input::placeholder,.search-icon{
     color: rgba(0,0,0,0.25);
 }
