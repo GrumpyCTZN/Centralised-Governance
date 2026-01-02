@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/css/style.css" />
+
+    {% block head %}{% endblock %}
+
+    <link rel="icon" href="/static/images/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search"
+    />
+    <script
+      src="https://kit.fontawesome.com/27b6d5e244.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header class="container">
+      <div class="logo">
+        <a href="{{url_for('index')}}">
+          <img
+            src="/static/images/logo.png"
+            alt="Website logo"
+            class="mainlogo"
+          />
+        </a>
+      </div>
+
+      <nav class="navbar">
+        <ul class="navbarlist">
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          <li><a href="{{ url_for('commonservices') }}">Common Services</a></li>
+          <li>
+            <a href="{{ url_for('officialWebsites') }}">Official Website</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>{% block body %}{% endblock %}</main>
+
+    <footer>
+      <div class="footcontainer">
+        <div>
+          Contact Us: &ensp;
+          <i class="fa-solid fa-phone"></i>
+          +977-1-1234567 &ensp;
+          <i class="fa-regular fa-envelope"></i>
+          abcd@gmail.gov.np &ensp;
+          <i class="fa-solid fa-map-marker-alt"></i>
+          Kathmandu, Nepal
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
