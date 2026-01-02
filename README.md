@@ -30,24 +30,7 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-## 4 — Apply database migrations (must run after pulling new migrations)
-- macOS / Linux
-```bash
-export FLASK_APP=app.py
-flask db upgrade
-```
-- Windows (PowerShell)
-```powershell
-$env:FLASK_APP = "app.py"
-flask db upgrade
-```
-
-## 5 — Seed demo data (idempotent)
-```bash
-python scripts/seed.py
-```
-
-## 6 — Run the app
+## To run the App
 ```bash
 python app.py
 # or
