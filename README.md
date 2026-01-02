@@ -8,7 +8,7 @@ This README is for project collaborators only — it contains the exact, minimal
 
 ## 1 — Clone the repo
 ```bash
-git clone git@github.com:owner/repo.git
+git clone git@github.com:GrumpyCTZN/Centralised-Governance.git
 cd repo
 ```
 
