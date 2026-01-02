@@ -4,15 +4,15 @@
 <title>Common Services</title>
 {%endblock%}
 {% block body %} 
+<main>
 <section class="services-wrapper">
-<main></main>
     <div class="header">
         <h2>Common Services</h2>
         <p>You might be looking for one of these....<br><br></p>
     </div>
       <div class="services-list">
 
-    <a class="service-item" href="#">
+    <a class="service-item" href="{{url_for('commonservices',servicepath='citizenship')}}">
       <div>
         <h3>Citizenship Services</h3>
         <p>Apply for citizenship by learning the required original or photocopied documents, the closest government ofiice<br>and the info needed to fill the form.</p>
@@ -26,14 +26,14 @@
       </div>
     </a>
 
-    <a class="service-item" href="#">
+    <a class="service-item" href="{{url_for('commonservices',servicepath='drivinglicense')}}">
       <div>
         <h3>Driving License</h3>
         <p>About the entire license applying and trial process along with the info regarding closest office, retrial dates, new applicant acceptance date<br>and the license status.</p>
       </div>
     </a>
 
-    <a class="service-item" href="#">
+    <a class="service-item" href="{{url_for('commonservices',servicepath='passport')}}">
       <div>
         <h3>Passport Services</h3>
         <p>Apply for citizenship by learning the required original or photocopied documents, the closest government ofiice<br>and the info needed to fill the form.</p>
@@ -42,4 +42,5 @@
 
   </div>
 </section>
+</main>
 {% endblock %}
