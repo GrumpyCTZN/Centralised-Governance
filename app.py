@@ -1,6 +1,6 @@
 from flask import Flask,render_template, url_for,request,redirect
 from datetime import datetime
-
+from tables import tables_bp
 app=Flask(__name__)
 
 @app.route('/', methods=['POST','GET'])
@@ -21,6 +21,8 @@ def officialWebsites():
 @app.route('/search')
 def handleSearch():
     return render_template('search.html')
+
+app.register_blueprint(tables_bp)
 
 if __name__=="__main__":
     app.run(debug=True)

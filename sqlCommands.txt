@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS DOCUMENTS(
+    docId INTEGER PRIMARY KEY AUTOINCREMENT,
+       docName TEXT NOT NULL,
+    docDescription TEXT NOT NULL,
+    docSample BLOB
+)
+
