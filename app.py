@@ -26,11 +26,16 @@ def index():
 @app.route('/commonservices/<path:servicepath>')
 def commonservices(servicepath=None):
     print(fetchData('Citizenship'))
-    if servicepath==None: return render_template('commonservices.html',data = None)
-    elif servicepath == 'Citizenship': return render_template('docs.html',data = fetchData(translateData('Citizenship')))   
-    elif servicepath=='DrivingLicense': return render_template('docs.html',data = fetchData(translateData('DrivingLicense')))   
-    elif servicepath=='Passport': return render_template('docs.html',data = fetchData(translateData('Passport')))  
-    elif servicepath=='NIDCard': return render_template('docs.html',data = fetchData(translateData('NIDCard')))
+    if servicepath==None: 
+        return render_template('commonservices.html',data = None)
+    elif servicepath == 'Citizenship': 
+        return render_template('docs.html',data = fetchData(translateData('Citizenship')))   
+    elif servicepath=='DrivingLicense': 
+        return render_template('docs.html',data = fetchData(translateData('DrivingLicense')))   
+    elif servicepath=='Passport': 
+        return render_template('docs.html',data = fetchData(translateData('Passport')))  
+    elif servicepath=='NIDCard': 
+        return render_template('docs.html',data = fetchData(translateData('NIDCard')))
     else: abort(404)
 
 @app.route('/officialwebsite')
