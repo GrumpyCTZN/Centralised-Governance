@@ -1,13 +1,61 @@
 {% extends 'base.html' %}
+{% block head %}
+<title>Passport Services</title>
+{% endblock %}
 
-{%block head%}
-<title>Passport</title>
-{%endblock%}
-
-{%block body%}
+{% block body %}
 <main>
-    <section class="services-wrapper">
-        <t1>PASSPORT DETAILS</t1>
-    </section>
+  <section class="service-detail-wrapper">
+    
+    <div class="service-detail-header">
+      <h1>Passport Services</h1>
+    </div>
+
+    <div class="info-boxes-container">
+      
+      <div class="info-box">
+        <button class="info-box-header" onclick="toggleSection('requirements')">
+          <span class="section-title">Basic Requirements</span>
+          <span class="toggle-icon" id="requirements-icon">▼</span>
+        </button>
+        <div class="info-box-content" id="requirements-content">
+          <p>Add basic requirements for passport...</p>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <button class="info-box-header" onclick="toggleSection('documents')">
+          <span class="section-title">Documents Required</span>
+          <span class="toggle-icon" id="documents-icon">▼</span>
+        </button>
+        <div class="info-box-content" id="documents-content">
+          <p>Add documents required for passport...</p>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <button class="info-box-header" onclick="toggleSection('form')">
+          <span class="section-title">Application Form</span>
+          <span class="toggle-icon" id="form-icon">▼</span>
+        </button>
+        <div class="info-box-content" id="form-content">
+          <p>Add passport application form info...</p>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <button class="info-box-header" onclick="toggleSection('office')">
+          <span class="section-title">Closest Office</span>
+          <span class="toggle-icon" id="office-icon">▼</span>
+        </button>
+        <div class="info-box-content" id="office-content">
+          <p>Add closest office info for passport...</p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
 </main>
-{%endblock%}
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% endblock %}
