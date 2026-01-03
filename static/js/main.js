@@ -6,10 +6,16 @@ function toggleSection(sectionId) {
     content.style.maxHeight = null;
     content.classList.remove('active');
     icon.textContent = '▼';
+
+    history.pushState(null,null,window.location.pathname);
   } else {
     content.style.maxHeight = content.scrollHeight + 'px';
     content.classList.add('active');
     icon.textContent = '▲';
+    const parentId = content.parentElement.id;
+    if (parentId) {
+      history.pushState(null, null, '#' + parentId);
+    }
   }
 }
 document.addEventListener("DOMContentLoaded", function () {

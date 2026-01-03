@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block head %}
-<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
  {%block comhead%}{%endblock%}
 {% endblock %}
 
@@ -14,7 +14,7 @@
 
     <div class="info-boxes-container">
       
-      <div class="info-box">
+      <div class="info-box" id="basic-requirement">
         <button class="info-box-header" onclick="toggleSection('requirements')">
           <span class="section-title">Basic Requirements</span>
           <span class="toggle-icon" id="requirements-icon">▼</span>
@@ -24,7 +24,7 @@
         </div>
       </div>
 
-      <div class="info-box">
+      <div class="info-box" id="documents-required">
         <button class="info-box-header" onclick="toggleSection('documents')">
           <span class="section-title">Documents Required</span>
           <span class="toggle-icon" id="documents-icon">▼</span>
@@ -34,7 +34,7 @@
         </div>
       </div>
 
-      <div class="info-box">
+      <div class="info-box" id="application-form">
         <button class="info-box-header" onclick="toggleSection('form')">
           <span class="section-title">Application Form</span>
           <span class="toggle-icon" id="form-icon">▼</span>
@@ -44,7 +44,7 @@
         </div>
       </div>
 
-      <div class="info-box">
+      <div class="info-box" id="closest-office">
         <button class="info-box-header" onclick="toggleSection('office')">
           <span class="section-title">Closest Office</span>
           <span class="toggle-icon" id="office-icon">▼</span>
@@ -57,6 +57,27 @@
     </div>
 
   </section>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  <script>
+  // This function waits for the entire window to be 100% finished loading
+  window.addEventListener('load', function() {
+    const hash = window.location.hash;
+    if (hash) {
+      // Find the container (e.g., #closest-office)
+      const targetSection = document.querySelector(hash);
+      if (targetSection) {
+        // Find the button inside and click it
+        const button = targetSection.querySelector('.info-box-header');
+        if (button) {
+          setTimeout(() => {
+            button.click();
+            targetSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }, 500);
+        }
+      }
+    }
+  });
+</script>
 </main>
 
 

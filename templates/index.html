@@ -1,5 +1,7 @@
 {% extends 'base.html' %} {% block head %}
 <title>Centralised Governance</title>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
 {% endblock %} {% block body %}
 <main>
   <section id="home">
@@ -19,8 +21,11 @@
       </div>
     </form>
   </section>
-
-  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  {% if trigger_alert %}
+        <script>
+            alert("We couldnt respond to that prompt. \nPlease try including the services you need");
+        </script>
+    {% endif %}
+  
 </main>
 {% endblock %}

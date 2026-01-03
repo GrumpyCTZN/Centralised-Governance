@@ -35,5 +35,14 @@ pip install -r requirements.txt
 python app.py
 # or
 flask run
-# Visit: http://127.0.0.1:5000
+Visit: http://127.0.0.1:5000 or
+       http://localhost:5000
 ```
+
+## 4 — Setup Groq API Key
+To use the AI features, you must provide your own API key:
+1. Go to the [Groq Cloud Console](https://console.groq.com/keys).
+2. Click **"Create API Key"**.
+3. Copy the generated key.
+4. In the project **root folder**, create a new file named `apikey.txt`.
+5. Paste the key into `apikey.txt` and save the file.
