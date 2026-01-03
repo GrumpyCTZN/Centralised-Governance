@@ -1,62 +1,11 @@
-{% extends 'base.html' %}
-{% block head %}
+{% extends 'commonbase.html' %}
+{% set service_name = "driving license" %}
+{%block comhead%}
 <title>Driving License</title>
-{% endblock %}
 
-{% block body %}
-<main>
-  <section class="service-detail-wrapper">
-    
-    <div class="service-detail-header">
-      <h1>Driving License</h1>
-    </div>
+{%endblock%}
 
-    <div class="info-boxes-container">
-      
-      <div class="info-box">
-        <button class="info-box-header" onclick="toggleSection('requirements')">
-          <span class="section-title">Basic Requirements</span>
-          <span class="toggle-icon" id="requirements-icon">▼</span>
-        </button>
-        <div class="info-box-content" id="requirements-content">
-          <p>Add basic requirements for driving license...</p>
-        </div>
-      </div>
 
-      <div class="info-box">
-        <button class="info-box-header" onclick="toggleSection('documents')">
-          <span class="section-title">Documents Required</span>
-          <span class="toggle-icon" id="documents-icon">▼</span>
-        </button>
-        <div class="info-box-content" id="documents-content">
-          <p>Add documents required for driving license...</p>
-        </div>
-      </div>
-
-      <div class="info-box">
-        <button class="info-box-header" onclick="toggleSection('form')">
-          <span class="section-title">Application Form</span>
-          <span class="toggle-icon" id="form-icon">▼</span>
-        </button>
-        <div class="info-box-content" id="form-content">
-          <p>Add driving license application form info...</p>
-        </div>
-      </div>
-
-      <div class="info-box">
-        <button class="info-box-header" onclick="toggleSection('office')">
-          <span class="section-title">Closest Office</span>
-          <span class="toggle-icon" id="office-icon">▼</span>
-        </button>
-        <div class="info-box-content" id="office-content">
-          <p>Add closest office info for driving license...</p>
-        </div>
-      </div>
-
-    </div>
-
-  </section>
-</main>
-
-<script src="{{ url_for('static', filename='js/main.js') }}"></script>
-{% endblock %}
+{%block comheader%}
+<h1>Driving License</h1>
+{%endblock%}
