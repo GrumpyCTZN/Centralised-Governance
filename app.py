@@ -19,12 +19,12 @@ def commonservices(servicepath=None):
     elif servicepath == 'citizenship': return render_template('citizenship.html')   
     elif servicepath=='drivinglicense': return render_template('drivinglicense.html')   
     elif servicepath=='passport': return render_template('passport.html')  
-    elif servicepath=='lalpurja': return render_template('lalpurja.html')
+    elif servicepath=='nidcard': return render_template('nidcard.html')
     else: abort(404)
 
 @app.route('/officialwebsite')
 def officialWebsites():
-    return render_template('officalwebsite.html')
+    return render_template('officialwebsite.html')
 
 @app.route('/search')
 def handleSearch():
