@@ -11,7 +11,7 @@ env/
 # Local env/secrets
 .env
 instance/
-
+apikey.txt
 # Database and logs
 *.db
 app.db
