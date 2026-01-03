@@ -1,22 +1,26 @@
-{%extends 'base.html' %}
-
-{% block head %} 
+{% extends 'base.html' %} {% block head %}
 <title>Centralised Governance</title>
-{% endblock %}
-
-
-
-{% block body %} 
+{% endblock %} {% block body %}
 <main>
-    <section id="home">
+  <section id="home">
+    <div class="mainbody">
+      <h1>Government Services <span class="auto-type"></span></h1>
+    </div>
     <form action="/" method="POST">
-        <div class="search">
-            <span class="search-icon material-symbols-outlined"> search </span>
-            <input class="search-input" type="search" placeholder="Search" id="searchQuery" name="searchQuery" />
-        </div>
+      <div class="search">
+        <span class="search-icon material-symbols-outlined">search</span>
+        <input
+          class="search-input"
+          type="search"
+          placeholder="Search"
+          id="searchQuery"
+          name="searchQuery"
+        />
+      </div>
     </form>
-    </section>
+  </section>
+
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </main>
-
-{% endblock %} 
-
+{% endblock %}
