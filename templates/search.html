@@ -19,20 +19,20 @@
 
 <section id="home">
     <h1>Do you have the documents listed above?</h1>
-<form action="/search" method="POST">
-    <input type="hidden" name="service" value="{{ type }}">
-  <div class="search-page">
-    <button type="submit" name="choice" value="yes" class="search-input" style="flex: 1; border: none; border-right: 1px solid #ccc; cursor: pointer; background: transparent;">
-      Yes
-    </button>
-    <button type="submit" name="choice" value="no" class="search-input" style="flex: 1; border: none; cursor: pointer; background: transparent;">
-      No
-    </button>
-  </div>
-  </form>
-</section>
+    <form action="/search" method="POST">
+      <input type="hidden" name="service" value="{{ type }}" />
+      <div class="search-page">
+        <button type="submit" name="choice" value="yes" class="search-input">
+          Yes
+        </button>
+        <button type="submit" name="choice" value="no" class="search-input">
+          No
+        </button>
+      </div>
+    </form>
+  </section>
 
-{%endif%}
+  {%endif%}
 
   <section id="home">
     <form action="/" method="POST">
@@ -48,6 +48,5 @@
       </div>
     </form>
   </section>
-
 </main>
 {%endblock%}
