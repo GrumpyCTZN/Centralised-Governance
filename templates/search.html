@@ -1,8 +1,9 @@
 {%extends 'base.html'%} {%block head%}
 <title>Search</title>
-{%endblock%} {%block body%}
+{%endblock%} 
+{%block body%}
 <main>
-
+ <div class="optionbased">
 {% if type in ['DrivingLicense', 'NIDCard', 'Citizenship', 'Passport'] %}
     <h1>{{ type|capitalize }} documents box</h1>
   {% endif %}
@@ -15,8 +16,8 @@
       <li>{{ doc.strip() }}</li>
       {% endfor %}
     </ol>
+  </div>
   {% if button %}  
-
 <section id="home">
     <h1>Do you have the documents listed above?</h1>
     <form action="/search" method="POST">
@@ -33,20 +34,5 @@
   </section>
 
   {%endif%}
-
-  <section id="home">
-    <form action="/" method="POST">
-      <div class="search-page">
-        <span class="search-icon material-symbols-outlined"> search </span>
-        <input
-          class="search-input"
-          type="search"
-          placeholder="Search"
-          id="searchQuery"
-          name="searchQuery"
-        />
-      </div>
-    </form>
-  </section>
 </main>
 {%endblock%}

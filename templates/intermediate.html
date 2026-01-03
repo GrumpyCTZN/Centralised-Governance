@@ -3,7 +3,9 @@
 {%endblock%} 
 
 {%block body%}
-<h1>Missing documents list</h1>
+<div class="missinglist">
+  <h1>Missing documents list</h1>
+</div>
 <h2>Check the documents that you dont have</h2>
 {%set allDocuments = data[0][3] %}
   {%set documents = allDocuments.split(',') %}
