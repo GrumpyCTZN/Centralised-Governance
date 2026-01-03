@@ -220,12 +220,11 @@ footer{
   color: #555;
 }
 
-
-
-
-
-
-
-
-
-
+.services-container{
+display: flex;
+gap: 20px;
+}
+.services-container img{
+max-width: 200px;
+height: 50px;
+}

@@ -1,46 +1,82 @@
-{% extends 'base.html' %}
-
-{% block head %}
+{% extends 'base.html' %} {% block head %}
 <title>Common Services</title>
-{%endblock%}
-{% block body %} 
+{%endblock%} {% block body %}
 <main>
-<section class="services-wrapper">
+  <section class="services-wrapper">
     <div class="header">
-        <h2>Common Services</h2>
-        <p>You might be looking for one of these....<br><br></p>
+      <h2>Common Services</h2>
+      <p>You might be looking for one of these....<br /><br /></p>
     </div>
-      <div class="services-list">
-
-    <a class="service-item" href="{{url_for('commonservices',servicepath='citizenship')}}">
-      <div>
+    <div class="services-list">
+      <a
+        class="service-item"
+        href="{{url_for('commonservices',servicepath='citizenship')}}"
+      >
         <h3>Citizenship Services</h3>
-        <p>Apply for citizenship by learning the required original or photocopied documents, the closest government ofiice<br>and the info needed to fill the form.</p>
-      </div>
-    </a>
+        <div class="services-container">
+          <img
+            src="/static/images/citizenshipsample.png"
+            alt="citizenship-sample"
+          />
+          <p>
+            Apply for citizenship by learning the required original or
+            photocopied documents, the closest government ofiice<br />and the
+            info needed to fill the form.
+          </p>
+        </div>
+      </a>
 
-    <a class="service-item" href="{{url_for('commonservices',servicepath='lalpurja')}}">
-      <div>
+      <a
+        class="service-item"
+        href="{{url_for('commonservices',servicepath='lalpurja')}}"
+      >
         <h3>National ID (NID)</h3>
-        <p>Apply for NID by learning the required documents, biometrics, form sample and closest government office or check<br>the current status of your NID.</p>
-      </div>
-    </a>
+        <div class="services-container">
+          <img src="/static/images/nidsample.png" alt="NID-sample" />
+          <p>
+            Apply for NID by learning the required documents, biometrics, form
+            sample and closest government office or check<br />the current
+            status of your NID.
+          </p>
+        </div>
+      </a>
 
-    <a class="service-item" href="{{url_for('commonservices',servicepath='drivinglicense')}}">
-      <div>
+      <a
+        class="service-item"
+        href="{{url_for('commonservices',servicepath='drivinglicense')}}"
+      >
         <h3>Driving License</h3>
-        <p>About the entire license applying and trial process along with the info regarding closest office, retrial dates, new applicant acceptance date<br>and the license status.</p>
-      </div>
-    </a>
+        <div class="services-container">
+          <img
+            src="/static/images/drivinglicensesample.png"
+            alt="drivinglicense-sample"
+          />
+          <p>
+            About the entire license applying and trial process along with the
+            info regarding closest office, retrial dates, new applicant
+            acceptance date<br />and the license status.
+          </p>
+        </div>
+      </a>
 
-    <a class="service-item" href="{{url_for('commonservices',servicepath='passport')}}">
-      <div>
+      <a
+        class="service-item"
+        href="{{url_for('commonservices',servicepath='passport')}}"
+      >
         <h3>Passport Services</h3>
-        <p>Apply for citizenship by learning the required original or photocopied documents, the closest government ofiice<br>and the info needed to fill the form.</p>
-      </div>
-    </a>
-
-  </div>
-</section>
+        <div class="services-container">
+          <img
+            src="/static/images/nepalpassportsample.png"
+            alt="neplapassport-sample"
+          />
+          <p>
+            Apply for citizenship by learning the required original or
+            photocopied documents, the closest government ofiice<br />and the
+            info needed to fill the form.
+          </p>
+        </div>
+      </a>
+    </div>
+  </section>
 </main>
 {% endblock %}
