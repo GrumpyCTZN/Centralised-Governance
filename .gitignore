@@ -16,6 +16,7 @@ apikey.txt
 *.db
 app.db
 app.log
+apikey.txt
 
 # Editor / OS
 .vscode/

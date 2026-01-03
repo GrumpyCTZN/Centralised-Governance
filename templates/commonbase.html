@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% block head %}
+
+ {%block comhead%}{%endblock%}
+{% endblock %}
+
+{% block body %}
+<main>
+  <section class="service-detail-wrapper">
+    
+    <div class="service-detail-header">
+      {%block comheader%}{%endblock%}
+    </div>
+
+    <div class="info-boxes-container">
+      
+      <div class="info-box" id="basic-requirement">
+        <button class="info-box-header" onclick="toggleSection('requirements')">
+          <span class="section-title">Basic Requirements</span>
+          <span class="toggle-icon" id="requirements-icon">▼</span>
+        </button>
+        <div class="info-box-content" id="requirements-content">
+          <p>Add basic requirements for {{service_name}}...</p>
+        </div>
+      </div>
+
+      <div class="info-box" id="documents-required">
+        <button class="info-box-header" onclick="toggleSection('documents')">
+          <span class="section-title">Documents Required</span>
+          <span class="toggle-icon" id="documents-icon">▼</span>
+        </button>
+        <div class="info-box-content" id="documents-content">
+          <p>Add documents required for {{service_name}}...</p>
+        </div>
+      </div>
+
+      <div class="info-box" id="application-form">
+        <button class="info-box-header" onclick="toggleSection('form')">
+          <span class="section-title">Application Form</span>
+          <span class="toggle-icon" id="form-icon">▼</span>
+        </button>
+        <div class="info-box-content" id="form-content">
+          <p>Add {{service_name}} application form info...</p>
+        </div>
+      </div>
+
+      <div class="info-box" id="closest-office">
+        <button class="info-box-header" onclick="toggleSection('office')">
+          <span class="section-title">Closest Office</span>
+          <span class="toggle-icon" id="office-icon">▼</span>
+        </button>
+        <div class="info-box-content" id="office-content">
+          <p>Add closest office info for {{service_name}}...</p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  <script>
+  // This function waits for the entire window to be 100% finished loading
+  window.addEventListener('load', function() {
+    const hash = window.location.hash;
+    if (hash) {
+      // Find the container (e.g., #closest-office)
+      const targetSection = document.querySelector(hash);
+      if (targetSection) {
+        // Find the button inside and click it
+        const button = targetSection.querySelector('.info-box-header');
+        if (button) {
+          setTimeout(() => {
+            button.click();
+            targetSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }, 500);
+        }
+      }
+    }
+  });
+</script>
+</main>
+
+
+
+
+{% endblock %}

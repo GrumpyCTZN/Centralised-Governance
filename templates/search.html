@@ -1,19 +1,47 @@
-{%extends 'base.html'%}
-
-{%block head%}
+{%extends 'base.html'%} {%block head%}
 <title>Search</title>
-{%endblock%}
-
-{%block body%}
+{%endblock%} {%block body%}
 <main>
-    <section id="home">
+
+{% for doc_type in ['drivinglicense', 'nidcard', 'citizenship', 'passport'] %}
+  {% if type == doc_type %}
+    <h1>{{ doc_type|capitalize }} documents box</h1>
+  {% endif %}
+{% endfor %}
+
+  {% if button %}  
+
+<section id="home">
+    <h1>Do you have the documents listed above?</h1>
+<form action="/search" method="POST">
+    <input type="hidden" name="service" value="{{ type }}">
+  <div class="search-page">
+    <button type="submit" name="choice" value="yes" class="search-input" style="flex: 1; border: none; border-right: 1px solid #ccc; cursor: pointer; background: transparent;">
+      Yes
+    </button>
+    <button type="submit" name="choice" value="no" class="search-input" style="flex: 1; border: none; cursor: pointer; background: transparent;">
+      No
+    </button>
+  </div>
+  </form>
+</section>
+
+{%endif%}
+
+  <section id="home">
     <form action="/" method="POST">
-        <div class="search-page">
-            <span class="search-icon material-symbols-outlined"> search </span>
-            <input class="search-input" type="search-page" placeholder="Search" id="searchQuery" name="searchQuery" />
-        </div>
+      <div class="search-page">
+        <span class="search-icon material-symbols-outlined"> search </span>
+        <input
+          class="search-input"
+          type="search"
+          placeholder="Search"
+          id="searchQuery"
+          name="searchQuery"
+        />
+      </div>
     </form>
-    </section>
+  </section>
+
 </main>
 {%endblock%}
-

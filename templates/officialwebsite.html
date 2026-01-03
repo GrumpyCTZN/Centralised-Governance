@@ -1,11 +1,73 @@
-{%extends 'base.html'%}
-
-{% block head %}
+{%extends 'base.html'%} {% block head %}
 <title>Official Websites</title>
-{% endblock %}
+{% endblock %} {% block body %}
+ <section class="services-wrapper">
+    <div class="header">
+      <h2>Official Website</h2>
+      <p> Offical Website for all the services<br /><br /></p>
+    </div>
+    <div class="services-list">
+      <a 
+        class="service-item"
+        href="https://moha.gov.np/en/post/citizenship-9"
+      >
+        <h3>Ministry of Home Affairs </h3>
+        <div class="services-container">
+          <img
+            src="/static/images/nepallogo.svg.png"
+            alt="citizenship-sample"
+          />
+          <p>
+           The MoHA is responsible for administering, regulating, and implementing the laws and policies related to citizenship across the country.
+          </p>
+        </div>
+      </a>
 
+      <a
+        class="service-item"
+        href="https://donidcr.gov.np/"
+      >
+        <h3>Department of National ID and Civil Registration </h3>
+        <div class="services-container">
+          <img src="/static/images/nepallogo.svg.png" alt="NID-sample" />
+          <p>
+          The Department of National ID and Civil Registration (DoNIDCR) in Nepal is the primary government body responsible for managing, issuing, and maintaining the National Identity (NID) Card system
+          </p>
+        </div>
+      </a>
 
+      <a
+        class="service-item"
+        href="https://www.dotm.gov.np"
+      >
+        <h3>The Department of Transport Management (DOTM)</h3>
+        <div class="services-container">
+          <img
+            src="/static/images/nepallogo.svg.png"
+            alt="drivinglicense-sample"
+          />
+          <p>
+           The Department of Transport Management (DoTM) in Nepal is the primary government body responsible for issuing, renewing, and managing all driving licenses, including handling the entire process from online applications, exams, biometrics, and printing smart cards.
+          </p>
+        </div>
+      </a>
 
-{% block body %} 
-<main></main>
+      <a
+        class="service-item"
+        href="https://nepalpassport.gov.np/"
+      >
+        <h3>The Department of Passports (DoP) </h3>
+        <div class="services-container">
+          <img
+            src="/static/images/nepallogo.svg.png"
+            alt="neplapassport-sample"
+          />
+          <p>
+            The Department of Passports (DoP) in Nepal, under the Ministry of Foreign Affairs, manages the issuance of Nepali passports (including electronic passports or e-passports) to eligible citizens.
+          </p>
+        </div>
+      </a>
+    </div>
+  </section>
+</main>
 {% endblock %}
