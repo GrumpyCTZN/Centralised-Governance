@@ -3,12 +3,18 @@
 {%endblock%} {%block body%}
 <main>
 
-{% for doc_type in ['drivinglicense', 'nidcard', 'citizenship', 'passport'] %}
-  {% if type == doc_type %}
-    <h1>{{ doc_type|capitalize }} documents box</h1>
+{% if type in ['DrivingLicense', 'NIDCard', 'Citizenship', 'Passport'] %}
+    <h1>{{ type|capitalize }} documents box</h1>
   {% endif %}
-{% endfor %}
 
+  <h2>Documents Required:</h2>
+  {%set allDocuments = data[0][3] %}
+  {%set documents = allDocuments.split(',') %}
+    <ol>
+      {% for doc in documents %}
+      <li>{{ doc.strip() }}</li>
+      {% endfor %}
+    </ol>
   {% if button %}  
 
 <section id="home">

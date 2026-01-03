@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{%block head%}
+<title>Redirecter</title>
+{%endblock%}
+
+{%block body%}
+{%for doc in unlinkable%}
+<p>Sorry, we cant help you with {{ doc }}</p>
+{% endfor %}
+{%  for service in linkable %}
+<p>You can find information about {{ service }} <a href="{{ url_for('commonservices', servicepath=service) }}">here</a>.</p>
+{% endfor %}
+{%endblock%}

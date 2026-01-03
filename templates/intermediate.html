@@ -6,8 +6,15 @@
 
 {%block body%}
 <h1>Missing documents list</h1>
-<li>1</li><!--should link to the 4 .htmls-->
-<li>2</li>
-<li>3</li>
-<li>4</li>
+<h2>Check the documents that you dont have</h2>
+{%set allDocuments = data[0][3] %}
+  {%set documents = allDocuments.split(',') %}
+  <form action="/submit_missing_documents" method="POST">
+  <ol>
+      {% for doc in documents %}
+      <input type="checkbox" name="docs" value="{{doc.strip()}}"> {{doc.strip()}}<br>
+      {% endfor %}
+    </ol>
+    <button type="submit" value="submit">Submit</button>
+</form>
 {%endblock%}

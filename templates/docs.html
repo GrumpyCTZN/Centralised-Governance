@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
-{% block head %}
+{% set service_name = data[0][1] %}
 
- {%block comhead%}{%endblock%}
+{% block head %}
+<title>{{ service_name }} Services</title>
 {% endblock %}
 
 {% block body %}
@@ -9,7 +10,7 @@
   <section class="service-detail-wrapper">
     
     <div class="service-detail-header">
-      {%block comheader%}{%endblock%}
+      <h1>{{ service_name }} Services</h1>
     </div>
 
     <div class="info-boxes-container">
@@ -20,7 +21,13 @@
           <span class="toggle-icon" id="requirements-icon">▼</span>
         </button>
         <div class="info-box-content" id="requirements-content">
-          <p>Add basic requirements for {{service_name}}...</p>
+            {%set allRequirements = data[0][2] %}
+            {%set requirements = allRequirements.split(',') %}
+            <ul>
+                {% for req in requirements %}
+                    <li>{{ req.strip() }}</li>
+                {% endfor %}
+            </ul>
         </div>
       </div>
 
@@ -30,7 +37,13 @@
           <span class="toggle-icon" id="documents-icon">▼</span>
         </button>
         <div class="info-box-content" id="documents-content">
-          <p>Add documents required for {{service_name}}...</p>
+            {%set allDocuments = data[0][3] %}
+            {%set documents = allDocuments.split(',') %}
+            <ul>
+                {% for doc in documents %}
+                    <li>{{ doc.strip() }}</li>
+                {% endfor %}
+            </ul>
         </div>
       </div>
 
@@ -40,7 +53,10 @@
           <span class="toggle-icon" id="form-icon">▼</span>
         </button>
         <div class="info-box-content" id="form-content">
-          <p>Add {{service_name}} application form info...</p>
+
+            <div>
+                <a href="{{ data[0][4] }}" target="_blank">Click here to access the application form for {{service_name}}</a>
+            </div>
         </div>
       </div>
 

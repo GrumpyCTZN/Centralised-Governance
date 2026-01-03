@@ -12,10 +12,10 @@ You are an information extraction system for Nepal Government Services.
 Your task is to extract fields from user text into JSON.
 
 VALID DOCUMENTS (Exact enum):
-- "citizenship"
-- "nidcard"
-- "drivinglicense"
-- "passport"
+- "Citizenship"
+- "NIDCard"
+- "DrivingLicense"
+- "Passport"
 - null (if none of the above are clearly mentioned)
 
 RULES:
@@ -23,7 +23,7 @@ RULES:
    - Example: "driving license", "license", "bike trial" -> "drivinglicense"
    - Example: "rastriya parichaya patra", "NID" -> "nidcard"
 2. criteria_not_met: Identify any missing requirement mentioned. Limit it to the mention of VALID DOCUMENTS only.
-    criteria_not_met should be in the format no(VALID DOCUMENT) eg, "nocitizenship", "nodrivinglicense" etc
+    criteria_not_met should be in the format (VALID DOCUMENT) eg, "Citizenship", "DrivingLicense" etc
     use null if the above doesnt hold true.
     
 3. address: Extract location if present.
@@ -31,7 +31,7 @@ RULES:
 Output JSON ONLY.
 
 Input: "I need a passport but lost my citizenship"
-Output: {"document": "passport", "criteria_not_met": "lost citizenship", "address": null}
+Output: {"document": "Passport", "criteria_not_met": "Citizenship,NIDCard", "address": null}
 """
 
 def parse_text(formText):
