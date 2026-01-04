@@ -1,4 +1,12 @@
-
+.service-detail-header h1{
+  font-size: 28px;
+  font-weight: 600;
+  color: #245ebb;
+  margin: 0;
+  text-transform: capitalize;
+  text-align: center;
+  margin-top: 10px;
+}
 * {
   margin: 0;
   padding: 0;
@@ -86,8 +94,14 @@ footer {
 }
 
 
-.search,
-.search-page {
+.search-page { /* layout container */
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.search { /* actual search bar */
   display: flex;
   align-items: center;
   gap: 10px;
@@ -95,13 +109,15 @@ footer {
   border-radius: 999px;
   background: #f6f6f6;
   width: min(600px, 90vw);
-  transition: background 0.25s, box-shadow 0.25s;
 }
+
 
 .search:focus-within,
 .search-page:focus-within {
   background: #f1f1f1;
-  box-shadow: 0 0 0 3px rgba(77, 163, 255, 0.25);
+  box-shadow: none;
+  outline: 3px solid rgba(77, 163, 255, 0.25);
+  outline-offset: 2px;
 }
 
 .search-icon {
