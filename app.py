@@ -66,7 +66,7 @@ def handleSearch():
 @app.route('/submit_missing_documents', methods=['POST'])
 def submit_missing_documents():
     missing_docs = request.form.getlist('docs')
-    services=['DrivingLicense','NID','Citizenship','Passport']
+    services=['Driving License','NID','Citizenship','Passport']
     linkable = []
     unlinkable = []
     for doc in missing_docs:

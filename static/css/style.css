@@ -358,12 +358,88 @@ footer {
   background: #f4f7ff;
   border-left: 5px solid #245ebb;
   border-radius: 10px;
+  text-align: center;
 }
-
-.missinglist h1{
+.missinglist h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #245ebb;
+  margin: 0;
+  text-transform: capitalize;
+}
+.missinglist h1 {
   font-size: 28px;
   font-weight: 600;
   color: #245ebb;
   margin: 0;
   text-transform: capitalize;
+}
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  background: #f9f9f9;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* Ordered list */
+form ol {
+  padding-left: 0;
+  list-style: none;
+}
+
+/* Each document item */
+form li {
+  margin-bottom: 12px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+form li:hover {
+  background: #eef5ff;
+  border-color: #4DA3FF;
+}
+
+/* Checkbox + label */
+form label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #333;
+}
+
+form input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #4DA3FF;
+}
+
+/* Submit button */
+form button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  background-color: #4DA3FF;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+  background-color: #2f82d9;
+  transform: translateY(-1px);
+}
+
+form button:active {
+  transform: translateY(0);
 }

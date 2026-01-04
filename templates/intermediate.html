@@ -1,20 +1,22 @@
 {% extends 'base.html' %} {%block head%}
 <title>Missing Documents</title>
-{%endblock%} 
-
-{%block body%}
-<div class="missinglist">
-  <h1>Missing documents list</h1>
-</div>
-<h2>Check the documents that you dont have</h2>
-{%set allDocuments = data[0][3] %}
-  {%set documents = allDocuments.split(',') %}
+{%endblock%} {%block body%}
+<main>
+  <div class="missinglist">
+    <h1>Missing documents list</h1>
+    <h2>Check the documents that you dont have</h2>
+  </div>
+  {%set allDocuments = data[0][3] %} {%set documents = allDocuments.split(',')
+  %}
   <form action="/submit_missing_documents" method="POST">
-  <ol>
+    <ol>
       {% for doc in documents %}
-      <input type="checkbox" name="docs" value="{{doc.strip()}}"> {{doc.strip()}}<br>
+      <input type="checkbox" name="docs" value="{{doc.strip()}}" />
+      {{doc.strip()}}<br />
       {% endfor %}
     </ol>
     <button type="submit" value="submit">Submit</button>
-</form>
-{%endblock%}
+  </form>
+  </main>
+  {%endblock%}
+</main>
