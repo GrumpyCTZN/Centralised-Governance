@@ -2,14 +2,17 @@ function toggleSection(sectionId) {
   const content = document.getElementById(sectionId + '-content');
   const icon = document.getElementById(sectionId + '-icon');
   
-  if (content.style.maxHeight) {
+  if (content.classList.contains('active')) {
     content.style.maxHeight = null;
     content.classList.remove('active');
     icon.textContent = '▼';
-
     history.pushState(null,null,window.location.pathname);
   } else {
-    content.style.maxHeight = content.scrollHeight + 'px';
+    // Force display temporarily to calculate full height
+    content.style.display = 'block';
+    content.style.maxHeight = 'none';
+    const fullHeight = content.scrollHeight;
+    content.style.maxHeight = fullHeight + 'px';
     content.classList.add('active');
     icon.textContent = '▲';
     const parentId = content.parentElement.id;

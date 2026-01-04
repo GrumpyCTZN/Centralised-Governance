@@ -204,63 +204,98 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  max-width: 900px;
+  margin: 30px auto;
 }
 
 .info-box {
   background: #ffffff;
-  border: 1px solid #e0e0e0;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  border: 2px solid #e8e8e8;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(36, 94, 187, 0.08);
+  transition: all 0.3s ease;
+}
+
+.info-box:hover {
+  border-color: #245ebb;
+  box-shadow: 0 8px 20px rgba(36, 94, 187, 0.15);
+  transform: translateY(-2px);
 }
 
 .info-box-header {
   width: 100%;
-  padding: 20px;
-  background: #f8f9fa;
+  padding: 18px 24px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #f0f2f5 100%);
   border: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: all 0.3s ease;
   text-align: left;
   font-size: 18px;
   font-weight: 600;
-  color: black;
+  color: #245ebb;
+  border-radius: 10px 10px 0 0;
 }
 
 .info-box-header:hover {
-  background: #e9ecef;
+  background: linear-gradient(135deg, #e9ecef 0%, #dfe3e9 100%);
+  color: #1b3a7a;
 }
 
 .section-title {
   font-size: 18px;
   font-weight: 600;
-  color: black;
+  color: #245ebb;
 }
 
 .toggle-icon {
-  font-size: 16px;
-  color: black;
-  transition: transform 0.3s;
+  font-size: 18px;
+  color: #245ebb;
+  transition: transform 0.3s ease;
+  font-weight: bold;
 }
 
 .info-box-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease-out;
-  padding: 0 20px;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+  padding: 0 24px;
 }
 
 .info-box-content.active {
-  padding: 20px;
+  max-height: none;
+  padding: 0px 24px;
 }
 
 .info-box-content p {
   color: #555;
   line-height: 1.6;
   margin: 0;
+}
+
+.info-box-content ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #555;
+  line-height: 1.8;
+}
+
+.info-box-content ul li {
+  margin: 8px 0;
+}
+
+.info-box-content a {
+  color: #245ebb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.info-box-content a:hover {
+  color: #1b3a7a;
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {
