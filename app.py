@@ -34,7 +34,7 @@ def commonservices(servicepath=None):
         return render_template('docs.html',data = fetchData(translateData('DrivingLicense')))   
     elif servicepath=='Passport': 
         return render_template('docs.html',data = fetchData(translateData('Passport')))  
-    elif servicepath=='NIDCard': 
+    elif servicepath=='NIDCard'or servicepath=='NID': 
         return render_template('docs.html',data = fetchData(translateData('NIDCard')))
     else: abort(404)
 
